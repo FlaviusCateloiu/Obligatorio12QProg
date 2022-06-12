@@ -15,6 +15,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
      */
     public PantallaPrincipal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,21 +27,178 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPPrincipal = new javax.swing.JPanel();
+        jBArticulos = new javax.swing.JButton();
+        jBClientes = new javax.swing.JButton();
+        jBAlquiler = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jMBPrincipal = new javax.swing.JMenuBar();
+        jMArticulo = new javax.swing.JMenu();
+        jMIAltaArticulo = new javax.swing.JMenuItem();
+        jMIBajaArticulo = new javax.swing.JMenuItem();
+        jMIModArticulo = new javax.swing.JMenuItem();
+        jMIConsArticulo = new javax.swing.JMenuItem();
+        jMIConsTodosArticulos = new javax.swing.JMenuItem();
+        jMCliente = new javax.swing.JMenu();
+        jMAlquiler = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jBArticulos.setText("Articulo");
+        jBArticulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBArticulosActionPerformed(evt);
+            }
+        });
+
+        jBClientes.setText("Cliente");
+
+        jBAlquiler.setText("Alquiler");
+        jBAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAlquilerActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Tienda Alquiler de Articulos.");
+
+        javax.swing.GroupLayout jPPrincipalLayout = new javax.swing.GroupLayout(jPPrincipal);
+        jPPrincipal.setLayout(jPPrincipalLayout);
+        jPPrincipalLayout.setHorizontalGroup(
+            jPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPPrincipalLayout.createSequentialGroup()
+                .addGroup(jPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPPrincipalLayout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addGroup(jPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPPrincipalLayout.createSequentialGroup()
+                                .addComponent(jBArticulos, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jBClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPrincipalLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jBAlquiler, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(48, 48, 48))))
+                    .addGroup(jPPrincipalLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel1)))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        jPPrincipalLayout.setVerticalGroup(
+            jPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPPrincipalLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
+                .addGroup(jPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBArticulos, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jBAlquiler, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+
+        jMArticulo.setText("Articulo");
+
+        jMIAltaArticulo.setText("Alta");
+        jMIAltaArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIAltaArticuloActionPerformed(evt);
+            }
+        });
+        jMArticulo.add(jMIAltaArticulo);
+
+        jMIBajaArticulo.setText("Baja");
+        jMIBajaArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIBajaArticuloActionPerformed(evt);
+            }
+        });
+        jMArticulo.add(jMIBajaArticulo);
+
+        jMIModArticulo.setText("Modificar");
+        jMIModArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIModArticuloActionPerformed(evt);
+            }
+        });
+        jMArticulo.add(jMIModArticulo);
+
+        jMIConsArticulo.setText("Consultar");
+        jMIConsArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIConsArticuloActionPerformed(evt);
+            }
+        });
+        jMArticulo.add(jMIConsArticulo);
+
+        jMIConsTodosArticulos.setText("Consultar Todos");
+        jMIConsTodosArticulos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIConsTodosArticulosActionPerformed(evt);
+            }
+        });
+        jMArticulo.add(jMIConsTodosArticulos);
+
+        jMBPrincipal.add(jMArticulo);
+
+        jMCliente.setText("Cliente");
+        jMBPrincipal.add(jMCliente);
+
+        jMAlquiler.setText("Alquiler");
+        jMBPrincipal.add(jMAlquiler);
+
+        setJMenuBar(jMBPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlquilerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBAlquilerActionPerformed
+
+    private void jBArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBArticulosActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jBArticulosActionPerformed
+
+    private void jMIAltaArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIAltaArticuloActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jMIAltaArticuloActionPerformed
+
+    private void jMIBajaArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBajaArticuloActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(1);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jMIBajaArticuloActionPerformed
+
+    private void jMIModArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIModArticuloActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(2);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jMIModArticuloActionPerformed
+
+    private void jMIConsArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIConsArticuloActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(3);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jMIConsArticuloActionPerformed
+
+    private void jMIConsTodosArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIConsTodosArticulosActionPerformed
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(4);
+        panArti.setVisible(true);
+    }//GEN-LAST:event_jMIConsTodosArticulosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +236,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBAlquiler;
+    private javax.swing.JButton jBArticulos;
+    private javax.swing.JButton jBClientes;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMAlquiler;
+    private javax.swing.JMenu jMArticulo;
+    private javax.swing.JMenuBar jMBPrincipal;
+    private javax.swing.JMenu jMCliente;
+    private javax.swing.JMenuItem jMIAltaArticulo;
+    private javax.swing.JMenuItem jMIBajaArticulo;
+    private javax.swing.JMenuItem jMIConsArticulo;
+    private javax.swing.JMenuItem jMIConsTodosArticulos;
+    private javax.swing.JMenuItem jMIModArticulo;
+    private javax.swing.JPanel jPPrincipal;
     // End of variables declaration//GEN-END:variables
 }
