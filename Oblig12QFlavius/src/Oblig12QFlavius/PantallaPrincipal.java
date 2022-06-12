@@ -1,21 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Oblig12QFlavius;
+
+import ADO.*;
+import MisListas.*;
 
 /**
  *
- * @author ElPepe
+ * @author Flavius Florian Cateloiu
  */
 public class PantallaPrincipal extends javax.swing.JFrame {
 
+    private ListaArticulos listaArt;
+    private ListaClientes listaCli;
+    private ListaAutores listaAut;
+    private ListaAlquileres listaAlq;
+    
     /**
      * Creates new form PantallaPrincipal
      */
     public PantallaPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
+        this.listaArt = new ListaArticulos();
+        this.listaCli = new ListaClientes();
+        this. listaAut = new ListaAutores();
+        this.listaAlq = new ListaAlquileres();
     }
 
     /**
@@ -54,11 +62,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jBClientes.setText("Cliente");
 
         jBAlquiler.setText("Alquiler");
-        jBAlquiler.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBAlquilerActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -166,37 +169,33 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlquilerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBAlquilerActionPerformed
-
     private void jBArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBArticulosActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jBArticulosActionPerformed
 
     private void jMIAltaArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIAltaArticuloActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(0, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIAltaArticuloActionPerformed
 
     private void jMIBajaArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBajaArticuloActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(1);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(1, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIBajaArticuloActionPerformed
 
     private void jMIModArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIModArticuloActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(2);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(2, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIModArticuloActionPerformed
 
     private void jMIConsArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIConsArticuloActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(3);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(3, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIConsArticuloActionPerformed
 
     private void jMIConsTodosArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIConsTodosArticulosActionPerformed
-        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(4);
+        PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(4, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIConsTodosArticulosActionPerformed
 
