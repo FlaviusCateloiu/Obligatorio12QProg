@@ -37,12 +37,28 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jTPArticulos = new javax.swing.JTabbedPane();
         jPAltaArticulo = new javax.swing.JPanel();
         jBVolverAlta = new javax.swing.JButton();
-        jPDatosAlta = new javax.swing.JPanel();
+        jPDatosArtAlta = new javax.swing.JPanel();
         jLblNombreAlta = new javax.swing.JLabel();
         jTFNombreAlta = new javax.swing.JTextField();
         jLFechaAlta = new javax.swing.JLabel();
         jLErrorNombreAlta = new javax.swing.JLabel();
         jDCFechaAlta = new com.toedter.calendar.JDateChooser();
+        jLAnyoAlta = new javax.swing.JLabel();
+        jTFAnyoAlta = new javax.swing.JTextField();
+        jLErrorAnyoAlta = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTAResumenAlta = new javax.swing.JTextArea();
+        jLErrorResumenAlta = new javax.swing.JLabel();
+        jPDatosAutArtAlta = new javax.swing.JPanel();
+        jLNombreAutorAlta = new javax.swing.JLabel();
+        jTFNombreAutorAlta = new javax.swing.JTextField();
+        jLApellidosAutorAlta = new javax.swing.JLabel();
+        jTFApellidosAutorAlta = new javax.swing.JTextField();
+        jLErrorNombreAutorAlta = new javax.swing.JLabel();
+        jLErrorDeterioradoAlta = new javax.swing.JLabel();
+        jCBDeterioradoAlta = new javax.swing.JCheckBox();
+        jLErrorApellidosAutorAlta1 = new javax.swing.JLabel();
         jPBajaArticulo = new javax.swing.JPanel();
         jBVolverBaja = new javax.swing.JButton();
         jPModifArticulo = new javax.swing.JPanel();
@@ -61,46 +77,141 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             }
         });
 
-        jPDatosAlta.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Datos del Articulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPDatosArtAlta.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Datos del Articulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         jLblNombreAlta.setText("Nombre:");
 
         jLFechaAlta.setText("Fecha:");
 
-        javax.swing.GroupLayout jPDatosAltaLayout = new javax.swing.GroupLayout(jPDatosAlta);
-        jPDatosAlta.setLayout(jPDatosAltaLayout);
-        jPDatosAltaLayout.setHorizontalGroup(
-            jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPDatosAltaLayout.createSequentialGroup()
+        jLAnyoAlta.setText("Año:");
+
+        jTFAnyoAlta.setText("0");
+
+        jLabel1.setText("Resumen:");
+
+        jTAResumenAlta.setColumns(20);
+        jTAResumenAlta.setLineWrap(true);
+        jTAResumenAlta.setRows(5);
+        jScrollPane1.setViewportView(jTAResumenAlta);
+
+        javax.swing.GroupLayout jPDatosArtAltaLayout = new javax.swing.GroupLayout(jPDatosArtAlta);
+        jPDatosArtAlta.setLayout(jPDatosArtAltaLayout);
+        jPDatosArtAltaLayout.setHorizontalGroup(
+            jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLblNombreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLblNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
+                    .addComponent(jLAnyoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPDatosAltaLayout.createSequentialGroup()
-                        .addComponent(jTFNombreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
+                        .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTFAnyoAlta)
+                            .addComponent(jTFNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                            .addComponent(jDCFechaAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLErrorNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPDatosAltaLayout.createSequentialGroup()
-                        .addComponent(jDCFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLErrorNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(jLErrorAnyoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)))
+                    .addComponent(jLErrorResumenAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPDatosAltaLayout.setVerticalGroup(
-            jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPDatosAltaLayout.createSequentialGroup()
+        jPDatosArtAltaLayout.setVerticalGroup(
+            jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLblNombreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTFNombreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLErrorNombreAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPDatosAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDCFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(417, Short.MAX_VALUE))
+                .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
+                        .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDCFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLAnyoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFAnyoAlta)))
+                    .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLErrorAnyoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLErrorResumenAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPDatosAutArtAlta.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Datos de Autor del Articulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        jLNombreAutorAlta.setText("Nombre Autor:");
+
+        jLApellidosAutorAlta.setText("Apellidos Autor:");
+
+        jCBDeterioradoAlta.setText("Articulo Deteriorado");
+
+        javax.swing.GroupLayout jPDatosAutArtAltaLayout = new javax.swing.GroupLayout(jPDatosAutArtAlta);
+        jPDatosAutArtAlta.setLayout(jPDatosAutArtAltaLayout);
+        jPDatosAutArtAltaLayout.setHorizontalGroup(
+            jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                        .addComponent(jCBDeterioradoAlta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorDeterioradoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(216, 216, 216))
+                    .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                        .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLApellidosAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTFNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                            .addComponent(jTFApellidosAutorAlta))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                    .addGap(309, 309, 309)
+                    .addComponent(jLErrorApellidosAutorAlta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
+        );
+        jPDatosAutArtAltaLayout.setVerticalGroup(
+            jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLNombreAutorAlta)
+                    .addComponent(jTFNombreAutorAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLErrorNombreAutorAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTFApellidosAutorAlta)
+                    .addComponent(jLApellidosAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCBDeterioradoAlta)
+                    .addComponent(jLErrorDeterioradoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
+                    .addGap(61, 61, 61)
+                    .addComponent(jLErrorApellidosAutorAlta1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                    .addGap(29, 29, 29)))
         );
 
         javax.swing.GroupLayout jPAltaArticuloLayout = new javax.swing.GroupLayout(jPAltaArticulo);
@@ -108,20 +219,24 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPAltaArticuloLayout.setHorizontalGroup(
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPAltaArticuloLayout.createSequentialGroup()
-                .addContainerGap(532, Short.MAX_VALUE)
+                .addContainerGap(621, Short.MAX_VALUE)
                 .addComponent(jBVolverAlta)
                 .addGap(15, 15, 15))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPAltaArticuloLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPDatosAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPAltaArticuloLayout.setVerticalGroup(
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPAltaArticuloLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPDatosAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
+                .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addComponent(jBVolverAlta)
                 .addGap(14, 14, 14))
         );
@@ -140,7 +255,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPBajaArticuloLayout.setHorizontalGroup(
             jPBajaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPBajaArticuloLayout.createSequentialGroup()
-                .addContainerGap(528, Short.MAX_VALUE)
+                .addContainerGap(617, Short.MAX_VALUE)
                 .addComponent(jBVolverBaja)
                 .addGap(19, 19, 19))
         );
@@ -166,7 +281,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPModifArticuloLayout.setHorizontalGroup(
             jPModifArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPModifArticuloLayout.createSequentialGroup()
-                .addContainerGap(530, Short.MAX_VALUE)
+                .addContainerGap(619, Short.MAX_VALUE)
                 .addComponent(jBVolverMod)
                 .addGap(17, 17, 17))
         );
@@ -192,7 +307,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPConsultarArticuloLayout.setHorizontalGroup(
             jPConsultarArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPConsultarArticuloLayout.createSequentialGroup()
-                .addContainerGap(532, Short.MAX_VALUE)
+                .addContainerGap(621, Short.MAX_VALUE)
                 .addComponent(jBVolverCons)
                 .addGap(15, 15, 15))
         );
@@ -218,7 +333,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPConsultarTodosArticulosLayout.setHorizontalGroup(
             jPConsultarTodosArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPConsultarTodosArticulosLayout.createSequentialGroup()
-                .addContainerGap(528, Short.MAX_VALUE)
+                .addContainerGap(617, Short.MAX_VALUE)
                 .addComponent(jBVolverConsTod)
                 .addGap(19, 19, 19))
         );
@@ -273,17 +388,33 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JButton jBVolverCons;
     private javax.swing.JButton jBVolverConsTod;
     private javax.swing.JButton jBVolverMod;
+    private javax.swing.JCheckBox jCBDeterioradoAlta;
     private com.toedter.calendar.JDateChooser jDCFechaAlta;
+    private javax.swing.JLabel jLAnyoAlta;
+    private javax.swing.JLabel jLApellidosAutorAlta;
+    private javax.swing.JLabel jLErrorAnyoAlta;
+    private javax.swing.JLabel jLErrorApellidosAutorAlta1;
+    private javax.swing.JLabel jLErrorDeterioradoAlta;
     private javax.swing.JLabel jLErrorNombreAlta;
+    private javax.swing.JLabel jLErrorNombreAutorAlta;
+    private javax.swing.JLabel jLErrorResumenAlta;
     private javax.swing.JLabel jLFechaAlta;
+    private javax.swing.JLabel jLNombreAutorAlta;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLblNombreAlta;
     private javax.swing.JPanel jPAltaArticulo;
     private javax.swing.JPanel jPBajaArticulo;
     private javax.swing.JPanel jPConsultarArticulo;
     private javax.swing.JPanel jPConsultarTodosArticulos;
-    private javax.swing.JPanel jPDatosAlta;
+    private javax.swing.JPanel jPDatosArtAlta;
+    private javax.swing.JPanel jPDatosAutArtAlta;
     private javax.swing.JPanel jPModifArticulo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTAResumenAlta;
+    private javax.swing.JTextField jTFAnyoAlta;
+    private javax.swing.JTextField jTFApellidosAutorAlta;
     private javax.swing.JTextField jTFNombreAlta;
+    private javax.swing.JTextField jTFNombreAutorAlta;
     private javax.swing.JTabbedPane jTPArticulos;
     // End of variables declaration//GEN-END:variables
 }
