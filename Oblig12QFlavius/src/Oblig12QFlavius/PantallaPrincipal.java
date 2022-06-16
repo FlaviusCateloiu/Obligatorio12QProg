@@ -35,6 +35,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         jPPrincipal = new javax.swing.JPanel();
         jBArticulos = new javax.swing.JButton();
         jBClientes = new javax.swing.JButton();
@@ -49,6 +51,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMIConsTodosArticulos = new javax.swing.JMenuItem();
         jMCliente = new javax.swing.JMenu();
         jMAlquiler = new javax.swing.JMenu();
+        jMSalir = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -153,6 +160,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMAlquiler.setText("Alquiler");
         jMBPrincipal.add(jMAlquiler);
 
+        jMSalir.setText("Salir");
+        jMSalir.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jMSalirStateChanged(evt);
+            }
+        });
+        jMBPrincipal.add(jMSalir);
+
         setJMenuBar(jMBPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -198,6 +213,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         PantallaOpcionesArticulos panArti = new PantallaOpcionesArticulos(4, listaArt, listaAut, listaAlq);
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIConsTodosArticulosActionPerformed
+
+    private void jMSalirStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jMSalirStateChanged
+        this.dispose();
+    }//GEN-LAST:event_jMSalirStateChanged
 
     /**
      * @param args the command line arguments
@@ -248,6 +267,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMIConsArticulo;
     private javax.swing.JMenuItem jMIConsTodosArticulos;
     private javax.swing.JMenuItem jMIModArticulo;
+    private javax.swing.JMenu jMSalir;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPPrincipal;
     // End of variables declaration//GEN-END:variables
 }
