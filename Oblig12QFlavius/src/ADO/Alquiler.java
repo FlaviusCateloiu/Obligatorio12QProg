@@ -6,6 +6,7 @@
 package ADO;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 
@@ -17,6 +18,7 @@ public class Alquiler implements Serializable {
     private Articulo a;
     private int dias;
     private Cliente cli;
+    private Date fechaAlq;
     
     public Alquiler(Articulo a, int dias, Cliente cli) {
         this.a = a;
@@ -46,6 +48,14 @@ public class Alquiler implements Serializable {
 
     public void setCliente(Cliente cli) {
         this.cli = cli;
+    }
+    
+    public Date getFechaAlq() {
+        return this.fechaAlq;
+    }
+    
+    public void setFechaAlq(Date fechaAlq) {
+        this.fechaAlq = fechaAlq;
     }
 
 }

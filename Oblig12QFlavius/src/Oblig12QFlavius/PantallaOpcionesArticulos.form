@@ -71,7 +71,7 @@
                       <Component id="jPDatosArtAlta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPDatosAutArtAlta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
                       <Component id="jBVolverAlta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
@@ -123,10 +123,17 @@
                                   <Component id="jLErrorNombreAlta" pref="400" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jLErrorResumenAlta" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jScrollPane1" pref="517" max="32767" attributes="0"/>
-                                      <Component id="jSAnyoAlta" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLAnyoAlta2000" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="469" max="-2" attributes="0"/>
+                                          <Component id="jLAnyoAlta2022" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane1" min="-2" pref="517" max="-2" attributes="0"/>
+                                          <Component id="jSAnyoAlta" min="-2" pref="517" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -156,14 +163,19 @@
                               <Component id="jLAnyoAlta" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                               <Component id="jSAnyoAlta" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLAnyoAlta2000" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLAnyoAlta2022" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLErrorResumenAlta" min="-2" pref="22" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -216,10 +228,19 @@
                 <Component class="javax.swing.JSlider" name="jSAnyoAlta">
                   <Properties>
                     <Property name="majorTickSpacing" type="int" value="1"/>
-                    <Property name="maximum" type="int" value="22"/>
-                    <Property name="paintLabels" type="boolean" value="true"/>
+                    <Property name="maximum" type="int" value="2022"/>
+                    <Property name="minimum" type="int" value="2000"/>
                     <Property name="paintTicks" type="boolean" value="true"/>
-                    <Property name="value" type="int" value="0"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLAnyoAlta2000">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="2000"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLAnyoAlta2022">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="2022"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -246,9 +267,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jCBDeterioradoAlta" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLErrorDeterioradoAlta" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+                                  <EmptySpace min="216" pref="538" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -289,11 +308,8 @@
                               <Component id="jTFApellidosAutorAlta" max="32767" attributes="0"/>
                               <Component id="jLApellidosAutorAlta" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jCBDeterioradoAlta" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLErrorDeterioradoAlta" min="-2" pref="22" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="jCBDeterioradoAlta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -322,8 +338,6 @@
                 <Component class="javax.swing.JTextField" name="jTFApellidosAutorAlta">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLErrorNombreAutorAlta">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLErrorDeterioradoAlta">
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCBDeterioradoAlta">
                   <Properties>
@@ -358,7 +372,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="489" max="32767" attributes="0"/>
+                      <EmptySpace pref="497" max="32767" attributes="0"/>
                       <Component id="jBVolverBaja" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   </Group>
@@ -398,7 +412,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="488" max="32767" attributes="0"/>
+                      <EmptySpace pref="496" max="32767" attributes="0"/>
                       <Component id="jBVolverMod" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
@@ -438,7 +452,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="485" max="32767" attributes="0"/>
+                      <EmptySpace pref="493" max="32767" attributes="0"/>
                       <Component id="jBVolverCons" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
@@ -478,7 +492,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="490" max="32767" attributes="0"/>
+                      <EmptySpace pref="498" max="32767" attributes="0"/>
                       <Component id="jBVolverConsTod" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
