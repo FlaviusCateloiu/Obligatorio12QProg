@@ -52,6 +52,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMCliente = new javax.swing.JMenu();
         jMAlquiler = new javax.swing.JMenu();
         jMSalir = new javax.swing.JMenu();
+        jMISalir = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -161,11 +162,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMBPrincipal.add(jMAlquiler);
 
         jMSalir.setText("Salir");
-        jMSalir.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jMSalirStateChanged(evt);
+
+        jMISalir.setText("Salir");
+        jMISalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMISalirActionPerformed(evt);
             }
         });
+        jMSalir.add(jMISalir);
+
         jMBPrincipal.add(jMSalir);
 
         setJMenuBar(jMBPrincipal);
@@ -214,9 +219,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         panArti.setVisible(true);
     }//GEN-LAST:event_jMIConsTodosArticulosActionPerformed
 
-    private void jMSalirStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jMSalirStateChanged
+    private void jMISalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMISalirActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jMSalirStateChanged
+    }//GEN-LAST:event_jMISalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,6 +272,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMIConsArticulo;
     private javax.swing.JMenuItem jMIConsTodosArticulos;
     private javax.swing.JMenuItem jMIModArticulo;
+    private javax.swing.JMenuItem jMISalir;
     private javax.swing.JMenu jMSalir;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
