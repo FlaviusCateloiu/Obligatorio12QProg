@@ -2,6 +2,8 @@ package Oblig12QFlavius;
 
 import ADO.*;
 import MisListas.*;
+import java.awt.Color;
+import java.util.Date;
 
 /**
  *
@@ -13,6 +15,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private ListaAutores listaAut;
     private ListaAlquileres listaAlq;
     private int posVentana;
+
     /**
      * Creates new form PantallaOpcionesArticulos
      */
@@ -20,17 +23,18 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.listaArt = listaArt;
-        this. listaAut = listaAut;
+        this.listaAut = listaAut;
         this.listaAlq = listaAlq;
         jTPArticulos.setSelectedIndex(posPanelArt);
         tipoArtSeleccionadoAlta();
     }
-    
+
     public void tipoArtSeleccionadoAlta() {
         if (jCBTipoArtAlta.getSelectedItem().equals("Libro Impreso")) {
             jPLibImpAlta.setVisible(true);
             jPAudLibAlta.setVisible(false);
-        } else {
+        }
+        if (jCBTipoArtAlta.getSelectedItem().equals("AudioLibro")) {
             jPLibImpAlta.setVisible(false);
             jPAudLibAlta.setVisible(true);
         }
@@ -61,6 +65,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jSAnyoAlta = new javax.swing.JSlider();
         jLAnyoAlta2000 = new javax.swing.JLabel();
         jLAnyoAlta2022 = new javax.swing.JLabel();
+        jLErrorFechaAlta = new javax.swing.JLabel();
         jPDatosAutArtAlta = new javax.swing.JPanel();
         jLNombreAutorAlta = new javax.swing.JLabel();
         jTFNombreAutorAlta = new javax.swing.JTextField();
@@ -81,6 +86,18 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jRBTapaDuraLibImpAlta = new javax.swing.JRadioButton();
         jRBTapaBlandaLibImpAlta = new javax.swing.JRadioButton();
         jPAudLibAlta = new javax.swing.JPanel();
+        jLNumPagAudLibAlta = new javax.swing.JLabel();
+        jTFNumPagAudLibAlta = new javax.swing.JTextField();
+        jLErrorNumPagAudLibAlta = new javax.swing.JLabel();
+        jCBSintetizarAudLibAlta = new javax.swing.JCheckBox();
+        jLHorasAudLibAlta = new javax.swing.JLabel();
+        jTFHorasAudLibAlta = new javax.swing.JTextField();
+        jLErrorHorasAudLibAlta = new javax.swing.JLabel();
+        jLMinutosAudLibAlta = new javax.swing.JLabel();
+        jTFMinutosAudLibAlta = new javax.swing.JTextField();
+        jLErrorMinutosAudLibAlta = new javax.swing.JLabel();
+        jBValidarAlta = new javax.swing.JButton();
+        jBGuardarAlta = new javax.swing.JButton();
         jPBajaArticulo = new javax.swing.JPanel();
         jPModifArticulo = new javax.swing.JPanel();
         jPConsultarArticulo = new javax.swing.JPanel();
@@ -89,6 +106,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jLVolver = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPAltaArticulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPDatosArtAlta.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Datos del Articulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
@@ -132,7 +151,9 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                             .addComponent(jTFNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                             .addComponent(jDCFechaAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLErrorNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLErrorNombreAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLErrorFechaAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jLErrorResumenAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPDatosArtAltaLayout.createSequentialGroup()
                         .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -158,7 +179,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDCFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDCFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLErrorFechaAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLAnyoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,21 +213,19 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
-                        .addComponent(jCBDeterioradoAlta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jCBDeterioradoAlta)
                     .addGroup(jPDatosAutArtAltaLayout.createSequentialGroup()
                         .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLApellidosAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTFNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                            .addComponent(jTFNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                             .addComponent(jTFApellidosAutorAlta))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPDatosAutArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLErrorNombreAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLErrorApellidosAutorAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLErrorApellidosAutorAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPDatosAutArtAltaLayout.setVerticalGroup(
@@ -293,15 +313,72 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
         jPAudLibAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLNumPagAudLibAlta.setText("Numero de Paginas:");
+
+        jTFNumPagAudLibAlta.setText("0");
+
+        jCBSintetizarAudLibAlta.setText("Sintetizado");
+
+        jLHorasAudLibAlta.setText("Horas Duracion:");
+
+        jTFHorasAudLibAlta.setText("0");
+
+        jLMinutosAudLibAlta.setText("Minutos Duracion:");
+
+        jTFMinutosAudLibAlta.setText("0");
+
         javax.swing.GroupLayout jPAudLibAltaLayout = new javax.swing.GroupLayout(jPAudLibAlta);
         jPAudLibAlta.setLayout(jPAudLibAltaLayout);
         jPAudLibAltaLayout.setHorizontalGroup(
             jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                        .addComponent(jLNumPagAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFNumPagAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorNumPagAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                        .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                        .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCBSintetizarAudLibAlta)
+                            .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                                .addComponent(jLMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLErrorMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPAudLibAltaLayout.setVerticalGroup(
             jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLNumPagAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFNumPagAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLErrorNumPagAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jCBSintetizarAudLibAlta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTFHorasAudLibAlta)
+                    .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLMinutosAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTFMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLErrorMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jLPTipoArtAlta.setLayer(jPLibImpAlta, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -320,7 +397,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addComponent(jPLibImpAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPOtrosDatosArtAltaLayout = new javax.swing.GroupLayout(jPOtrosDatosArtAlta);
@@ -336,11 +413,21 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPOtrosDatosArtAltaLayout.setVerticalGroup(
             jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jCBTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLPTipoArtAlta))
+                .addComponent(jLPTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        jBValidarAlta.setText("Validar");
+        jBValidarAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBValidarAltaActionPerformed(evt);
+            }
+        });
+
+        jBGuardarAlta.setText("Guardar");
+        jBGuardarAlta.setEnabled(false);
 
         javax.swing.GroupLayout jPAltaArticuloLayout = new javax.swing.GroupLayout(jPAltaArticulo);
         jPAltaArticulo.setLayout(jPAltaArticuloLayout);
@@ -348,11 +435,19 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPAltaArticuloLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPAltaArticuloLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jBValidarAlta)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBGuardarAlta)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPAltaArticuloLayout.createSequentialGroup()
+                        .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
         jPAltaArticuloLayout.setVerticalGroup(
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +458,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBValidarAlta)
+                    .addComponent(jBGuardarAlta))
+                .addContainerGap())
         );
 
         jTPArticulos.addTab("Alta", jPAltaArticulo);
@@ -376,7 +475,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPBajaArticuloLayout.setVerticalGroup(
             jPBajaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGap(0, 815, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Baja", jPBajaArticulo);
@@ -389,7 +488,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPModifArticuloLayout.setVerticalGroup(
             jPModifArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGap(0, 815, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Modificar", jPModifArticulo);
@@ -402,7 +501,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPConsultarArticuloLayout.setVerticalGroup(
             jPConsultarArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGap(0, 815, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar", jPConsultarArticulo);
@@ -415,7 +514,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPConsultarTodosArticulosLayout.setVerticalGroup(
             jPConsultarTodosArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGap(0, 815, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar Todos", jPConsultarTodosArticulos);
@@ -444,7 +543,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             .addGroup(jPVolverLayout.createSequentialGroup()
                 .addGap(292, 292, 292)
                 .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(291, Short.MAX_VALUE))
+                .addContainerGap(371, Short.MAX_VALUE))
         );
 
         jTPArticulos.addTab("Volver", jPVolver);
@@ -457,7 +556,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTPArticulos, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
+            .addComponent(jTPArticulos, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
         );
 
         pack();
@@ -471,10 +570,96 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jPVolverMouseClicked
 
+    private void jBValidarAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBValidarAltaActionPerformed
+        boolean correcto = true;
+
+        if (jTFNombreAlta.getText().isEmpty()) {
+            jLErrorNombreAlta.setForeground(Color.RED);
+            jLErrorNombreAlta.setText("Error es necesario introducir un nombre del Articulo.");
+            correcto = false;
+        } else {
+            jLErrorNombreAlta.setText("");
+        }
+
+        if (jDCFechaAlta.getDate() == null) {
+            jLErrorFechaAlta.setForeground(Color.RED);
+            jLErrorFechaAlta.setText("Error es necesario introducir la fecha del Articulo.");
+            correcto = false;
+        } else {
+            jLErrorFechaAlta.setText("");
+        }
+
+        if (jTAResumenAlta.getText().isEmpty()) {
+            jLErrorResumenAlta.setForeground(Color.RED);
+            jLErrorResumenAlta.setText("Error es necesario introducir el resumen del Articulo.");
+            correcto = false;
+        } else {
+            jLErrorResumenAlta.setText("");
+        }
+
+        if (jTFNombreAutorAlta.getText().isEmpty()) {
+            jLErrorNombreAutorAlta.setForeground(Color.RED);
+            jLErrorNombreAutorAlta.setText("Error es necesario introducir un nombre del Autor de dicho Articulo.");
+            correcto = false;
+        } else {
+            jLErrorNombreAutorAlta.setText("");
+        }
+
+        if (jTFApellidosAutorAlta.getText().isEmpty()) {
+            jLErrorApellidosAutorAlta.setForeground(Color.RED);
+            jLErrorApellidosAutorAlta.setText("Error es necesario introducir los apellidos del Autor de dicho Articulo.");
+            correcto = false;
+        } else {
+            jLErrorApellidosAutorAlta.setText("");
+        }
+
+        if (jCBTipoArtAlta.getSelectedItem().equals("Libro Impreso")) {
+            try {
+                Integer.parseInt(jTFNumPagLibImpAlta.getText());
+                if (Integer.parseInt(jTFNumPagLibImpAlta.getText()) <= 0) {
+                    jLErrorNumPagLibImpAlta.setForeground(Color.RED);
+                    jLErrorNumPagLibImpAlta.setText("Error el numero de paginas tiene que ser positivo.");
+                    correcto = false;
+                } else {
+                    jLErrorNumPagLibImpAlta.setText("");
+                }
+            } catch (NumberFormatException ne) {
+                jLErrorNumPagLibImpAlta.setForeground(Color.RED);
+                jLErrorNumPagLibImpAlta.setText("Error tienes que introducir un numero entero de paginas.");
+                correcto = false;
+            }
+        }
+        if (jCBTipoArtAlta.getSelectedItem().equals("AudioLibro")) {
+            try {
+                Integer.parseInt(jTFNumPagAudLibAlta.getText());
+                if (Integer.parseInt(jTFNumPagAudLibAlta.getText()) <= 0) {
+                    jLErrorNumPagAudLibAlta.setForeground(Color.RED);
+                    jLErrorNumPagAudLibAlta.setText("Error el numero de paginas tiene que ser positivo.");
+                    correcto = false;
+                } else {
+                    jLErrorNumPagAudLibAlta.setText("");
+                }
+            } catch (NumberFormatException ne) {
+                jLErrorNumPagAudLibAlta.setForeground(Color.RED);
+                jLErrorNumPagAudLibAlta.setText("Error tienes que introducir un numero entero de paginas.");
+                correcto = false;
+            }
+        }
+
+        if (correcto) {
+            jBGuardarAlta.setEnabled(true);
+        } else {
+            jBGuardarAlta.setEnabled(false);
+        }
+    }//GEN-LAST:event_jBValidarAltaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBGuardarAlta;
+    private javax.swing.JButton jBValidarAlta;
     private javax.swing.JCheckBox jCBDeterioradoAlta;
     private javax.swing.JCheckBox jCBFormatoLibImpAlta;
+    private javax.swing.JCheckBox jCBSintetizarAudLibAlta;
     private javax.swing.JComboBox<String> jCBTipoArtAlta;
     private com.toedter.calendar.JDateChooser jDCFechaAlta;
     private javax.swing.JLabel jLAnyoAlta;
@@ -482,12 +667,19 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JLabel jLAnyoAlta2022;
     private javax.swing.JLabel jLApellidosAutorAlta;
     private javax.swing.JLabel jLErrorApellidosAutorAlta;
+    private javax.swing.JLabel jLErrorFechaAlta;
+    private javax.swing.JLabel jLErrorHorasAudLibAlta;
+    private javax.swing.JLabel jLErrorMinutosAudLibAlta;
     private javax.swing.JLabel jLErrorNombreAlta;
     private javax.swing.JLabel jLErrorNombreAutorAlta;
+    private javax.swing.JLabel jLErrorNumPagAudLibAlta;
     private javax.swing.JLabel jLErrorNumPagLibImpAlta;
     private javax.swing.JLabel jLErrorResumenAlta;
     private javax.swing.JLabel jLFechaAlta;
+    private javax.swing.JLabel jLHorasAudLibAlta;
+    private javax.swing.JLabel jLMinutosAudLibAlta;
     private javax.swing.JLabel jLNombreAutorAlta;
+    private javax.swing.JLabel jLNumPagAudLibAlta;
     private javax.swing.JLabel jLNumPagLibImpAlta;
     private javax.swing.JLayeredPane jLPTipoArtAlta;
     private javax.swing.JLabel jLResumenAlta;
@@ -511,8 +703,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTAResumenAlta;
     private javax.swing.JTextField jTFApellidosAutorAlta;
+    private javax.swing.JTextField jTFHorasAudLibAlta;
+    private javax.swing.JTextField jTFMinutosAudLibAlta;
     private javax.swing.JTextField jTFNombreAlta;
     private javax.swing.JTextField jTFNombreAutorAlta;
+    private javax.swing.JTextField jTFNumPagAudLibAlta;
     private javax.swing.JTextField jTFNumPagLibImpAlta;
     private javax.swing.JTabbedPane jTPArticulos;
     // End of variables declaration//GEN-END:variables
