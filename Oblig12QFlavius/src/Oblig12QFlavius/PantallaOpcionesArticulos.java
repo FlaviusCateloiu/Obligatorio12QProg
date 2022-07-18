@@ -92,10 +92,10 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jCBSintetizarAudLibAlta = new javax.swing.JCheckBox();
         jLHorasAudLibAlta = new javax.swing.JLabel();
         jTFHorasAudLibAlta = new javax.swing.JTextField();
-        jLErrorHorasAudLibAlta = new javax.swing.JLabel();
         jLMinutosAudLibAlta = new javax.swing.JLabel();
         jTFMinutosAudLibAlta = new javax.swing.JTextField();
         jLErrorMinutosAudLibAlta = new javax.swing.JLabel();
+        jLErrorHorasAudLibAlta = new javax.swing.JLabel();
         jBValidarAlta = new javax.swing.JButton();
         jBGuardarAlta = new javax.swing.JButton();
         jPBajaArticulo = new javax.swing.JPanel();
@@ -341,13 +341,13 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLErrorNumPagAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPAudLibAltaLayout.createSequentialGroup()
-                        .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTFHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPAudLibAltaLayout.createSequentialGroup()
-                        .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPAudLibAltaLayout.createSequentialGroup()
+                                .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFHorasAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jCBSintetizarAudLibAlta)
                             .addGroup(jPAudLibAltaLayout.createSequentialGroup()
                                 .addComponent(jLMinutosAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -371,8 +371,9 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTFHorasAudLibAlta)
-                    .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTFHorasAudLibAlta)
+                        .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLMinutosAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -556,7 +557,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTPArticulos, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+            .addComponent(jTPArticulos)
         );
 
         pack();
@@ -642,6 +643,45 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             } catch (NumberFormatException ne) {
                 jLErrorNumPagAudLibAlta.setForeground(Color.RED);
                 jLErrorNumPagAudLibAlta.setText("Error tienes que introducir un numero entero de paginas.");
+                correcto = false;
+            }
+
+            try {
+                Integer.parseInt(jTFHorasAudLibAlta.getText());
+                if (Integer.parseInt(jTFHorasAudLibAlta.getText()) < 0 || Integer.parseInt(jTFHorasAudLibAlta.getText()) > 23) {
+                    jLErrorHorasAudLibAlta.setForeground(Color.RED);
+                    jLErrorHorasAudLibAlta.setText("Error las horas de duracion tiene que ser de 0 a 23.");
+                    correcto = false;
+                } else {
+                    jLErrorHorasAudLibAlta.setText("");
+                    try {
+                        Integer.parseInt(jTFMinutosAudLibAlta.getText());
+                        if (Integer.parseInt(jTFHorasAudLibAlta.getText()) > 0) {
+                            if (Integer.parseInt(jTFMinutosAudLibAlta.getText()) < 0 || Integer.parseInt(jTFMinutosAudLibAlta.getText()) > 59) {
+                                jLErrorMinutosAudLibAlta.setForeground(Color.RED);
+                                jLErrorMinutosAudLibAlta.setText("Error los minutos de duracion tiene que ser de 0 a 59.");
+                                correcto = false;
+                            } else {
+                                jLErrorMinutosAudLibAlta.setText("");
+                            }
+                        } else {
+                            if (Integer.parseInt(jTFMinutosAudLibAlta.getText()) <= 0 || Integer.parseInt(jTFMinutosAudLibAlta.getText()) > 59) {
+                                jLErrorMinutosAudLibAlta.setForeground(Color.RED);
+                                jLErrorMinutosAudLibAlta.setText("Error los minutos de duracion tiene que ser de 1 a 59.");
+                                correcto = false;
+                            } else {
+                                jLErrorMinutosAudLibAlta.setText("");
+                            }
+                        }
+                    } catch (NumberFormatException ne) {
+                        jLErrorMinutosAudLibAlta.setForeground(Color.RED);
+                        jLErrorMinutosAudLibAlta.setText("Error no has introducido un numero entero en las minutos de duracion.");
+                        correcto = false;
+                    }
+                }
+            } catch (NumberFormatException ne) {
+                jLErrorHorasAudLibAlta.setForeground(Color.RED);
+                jLErrorHorasAudLibAlta.setText("Error no has introducido un numero entero en las horas de duracion.");
                 correcto = false;
             }
         }
