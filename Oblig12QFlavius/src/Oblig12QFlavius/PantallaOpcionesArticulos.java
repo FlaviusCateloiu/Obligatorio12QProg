@@ -408,7 +408,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPMusicAlta.setLayout(jPMusicAltaLayout);
         jPMusicAltaLayout.setHorizontalGroup(
             jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 806, Short.MAX_VALUE)
         );
         jPMusicAltaLayout.setVerticalGroup(
             jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,8 +436,10 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPLibImpAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                        .addComponent(jPMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLPTipoArtAlta)
                 .addContainerGap())
@@ -486,7 +488,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 819, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPAltaArticuloLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
