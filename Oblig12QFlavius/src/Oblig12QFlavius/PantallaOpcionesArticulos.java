@@ -30,13 +30,21 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     }
 
     public void tipoArtSeleccionadoAlta() {
+        jPLibImpAlta.setVisible(false);
+        jPAudLibAlta.setVisible(false);
+        jPMusicAlta.setVisible(false);
+        jPVideoJuegoAlta.setVisible(false);
         if (jCBTipoArtAlta.getSelectedItem().equals("Libro Impreso")) {
             jPLibImpAlta.setVisible(true);
-            jPAudLibAlta.setVisible(false);
         }
         if (jCBTipoArtAlta.getSelectedItem().equals("AudioLibro")) {
-            jPLibImpAlta.setVisible(false);
             jPAudLibAlta.setVisible(true);
+        }
+        if (jCBTipoArtAlta.getSelectedItem().equals("Musica")) {
+            jPMusicAlta.setVisible(true);
+        }
+        if (jCBTipoArtAlta.getSelectedItem().equals("VideoJuego")) {
+            jPVideoJuegoAlta.setVisible(true);
         }
     }
 
@@ -96,6 +104,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jTFMinutosAudLibAlta = new javax.swing.JTextField();
         jLErrorMinutosAudLibAlta = new javax.swing.JLabel();
         jLErrorHorasAudLibAlta = new javax.swing.JLabel();
+        jPMusicAlta = new javax.swing.JPanel();
+        jPVideoJuegoAlta = new javax.swing.JPanel();
         jBValidarAlta = new javax.swing.JButton();
         jBGuardarAlta = new javax.swing.JButton();
         jPBajaArticulo = new javax.swing.JPanel();
@@ -248,12 +258,23 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
         jPOtrosDatosArtAlta.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Otros Datos Articulo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
-        jCBTipoArtAlta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libro Impreso", "AudioLibro" }));
+        jCBTipoArtAlta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Libro Impreso", "AudioLibro", "Musica", "VideoJuego" }));
         jCBTipoArtAlta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBTipoArtAltaActionPerformed(evt);
             }
         });
+
+        javax.swing.GroupLayout jLPTipoArtAltaLayout = new javax.swing.GroupLayout(jLPTipoArtAlta);
+        jLPTipoArtAlta.setLayout(jLPTipoArtAltaLayout);
+        jLPTipoArtAltaLayout.setHorizontalGroup(
+            jLPTipoArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jLPTipoArtAltaLayout.setVerticalGroup(
+            jLPTipoArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 264, Short.MAX_VALUE)
+        );
 
         jPLibImpAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -371,9 +392,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLErrorHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTFHorasAudLibAlta)
-                        .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jTFHorasAudLibAlta)
+                    .addComponent(jLHorasAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPAudLibAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLMinutosAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -382,42 +402,69 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLPTipoArtAlta.setLayer(jPLibImpAlta, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLPTipoArtAlta.setLayer(jPAudLibAlta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jPMusicAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout jLPTipoArtAltaLayout = new javax.swing.GroupLayout(jLPTipoArtAlta);
-        jLPTipoArtAlta.setLayout(jLPTipoArtAltaLayout);
-        jLPTipoArtAltaLayout.setHorizontalGroup(
-            jLPTipoArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPLibImpAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPAudLibAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPMusicAltaLayout = new javax.swing.GroupLayout(jPMusicAlta);
+        jPMusicAlta.setLayout(jPMusicAltaLayout);
+        jPMusicAltaLayout.setHorizontalGroup(
+            jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jLPTipoArtAltaLayout.setVerticalGroup(
-            jLPTipoArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLPTipoArtAltaLayout.createSequentialGroup()
-                .addComponent(jPLibImpAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        jPMusicAltaLayout.setVerticalGroup(
+            jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 129, Short.MAX_VALUE)
+        );
+
+        jPVideoJuegoAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPVideoJuegoAltaLayout = new javax.swing.GroupLayout(jPVideoJuegoAlta);
+        jPVideoJuegoAlta.setLayout(jPVideoJuegoAltaLayout);
+        jPVideoJuegoAltaLayout.setHorizontalGroup(
+            jPVideoJuegoAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPVideoJuegoAltaLayout.setVerticalGroup(
+            jPVideoJuegoAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 164, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPOtrosDatosArtAltaLayout = new javax.swing.GroupLayout(jPOtrosDatosArtAlta);
         jPOtrosDatosArtAlta.setLayout(jPOtrosDatosArtAltaLayout);
         jPOtrosDatosArtAltaLayout.setHorizontalGroup(
             jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPLibImpAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLPTipoArtAlta)
+                .addContainerGap())
             .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(jCBTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLPTipoArtAlta, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPOtrosDatosArtAltaLayout.setVerticalGroup(
             jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jCBTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLPTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLPTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                        .addComponent(jPLibImpAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPAudLibAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         jBValidarAlta.setText("Validar");
@@ -437,18 +484,16 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             .addGroup(jPAltaArticuloLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPAltaArticuloLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jBValidarAlta)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBGuardarAlta)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPAltaArticuloLayout.createSequentialGroup()
-                        .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+                    .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(jPAltaArticuloLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jBValidarAlta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBGuardarAlta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPAltaArticuloLayout.setVerticalGroup(
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -459,11 +504,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(42, 42, 42)
                 .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBValidarAlta)
                     .addComponent(jBGuardarAlta))
-                .addContainerGap())
+                .addGap(15, 15, 15))
         );
 
         jTPArticulos.addTab("Alta", jPAltaArticulo);
@@ -472,11 +517,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPBajaArticulo.setLayout(jPBajaArticuloLayout);
         jPBajaArticuloLayout.setHorizontalGroup(
             jPBajaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
+            .addGap(0, 831, Short.MAX_VALUE)
         );
         jPBajaArticuloLayout.setVerticalGroup(
             jPBajaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 815, Short.MAX_VALUE)
+            .addGap(0, 1157, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Baja", jPBajaArticulo);
@@ -485,11 +530,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPModifArticulo.setLayout(jPModifArticuloLayout);
         jPModifArticuloLayout.setHorizontalGroup(
             jPModifArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
+            .addGap(0, 831, Short.MAX_VALUE)
         );
         jPModifArticuloLayout.setVerticalGroup(
             jPModifArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 815, Short.MAX_VALUE)
+            .addGap(0, 1157, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Modificar", jPModifArticulo);
@@ -498,11 +543,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPConsultarArticulo.setLayout(jPConsultarArticuloLayout);
         jPConsultarArticuloLayout.setHorizontalGroup(
             jPConsultarArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
+            .addGap(0, 831, Short.MAX_VALUE)
         );
         jPConsultarArticuloLayout.setVerticalGroup(
             jPConsultarArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 815, Short.MAX_VALUE)
+            .addGap(0, 1157, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar", jPConsultarArticulo);
@@ -511,11 +556,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPConsultarTodosArticulos.setLayout(jPConsultarTodosArticulosLayout);
         jPConsultarTodosArticulosLayout.setHorizontalGroup(
             jPConsultarTodosArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 819, Short.MAX_VALUE)
+            .addGap(0, 831, Short.MAX_VALUE)
         );
         jPConsultarTodosArticulosLayout.setVerticalGroup(
             jPConsultarTodosArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 815, Short.MAX_VALUE)
+            .addGap(0, 1157, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar Todos", jPConsultarTodosArticulos);
@@ -535,7 +580,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPVolverLayout.setHorizontalGroup(
             jPVolverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPVolverLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
         );
@@ -544,7 +589,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             .addGroup(jPVolverLayout.createSequentialGroup()
                 .addGap(292, 292, 292)
                 .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(371, Short.MAX_VALUE))
+                .addContainerGap(713, Short.MAX_VALUE))
         );
 
         jTPArticulos.addTab("Volver", jPVolver);
@@ -562,10 +607,6 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jCBTipoArtAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoArtAltaActionPerformed
-        tipoArtSeleccionadoAlta();
-    }//GEN-LAST:event_jCBTipoArtAltaActionPerformed
 
     private void jPVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPVolverMouseClicked
         this.dispose();
@@ -693,6 +734,10 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBValidarAltaActionPerformed
 
+    private void jCBTipoArtAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoArtAltaActionPerformed
+        tipoArtSeleccionadoAlta();
+    }//GEN-LAST:event_jCBTipoArtAltaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBGuardarAlta;
@@ -735,7 +780,9 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JPanel jPDatosAutArtAlta;
     private javax.swing.JPanel jPLibImpAlta;
     private javax.swing.JPanel jPModifArticulo;
+    private javax.swing.JPanel jPMusicAlta;
     private javax.swing.JPanel jPOtrosDatosArtAlta;
+    private javax.swing.JPanel jPVideoJuegoAlta;
     private javax.swing.JPanel jPVolver;
     private javax.swing.JRadioButton jRBTapaBlandaLibImpAlta;
     private javax.swing.JRadioButton jRBTapaDuraLibImpAlta;
