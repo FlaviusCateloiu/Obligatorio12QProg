@@ -57,6 +57,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bGTapaLibImpAlta = new javax.swing.ButtonGroup();
+        bGTipoMusicAlta = new javax.swing.ButtonGroup();
         jTPArticulos = new javax.swing.JTabbedPane();
         jPAltaArticulo = new javax.swing.JPanel();
         jPDatosArtAlta = new javax.swing.JPanel();
@@ -105,6 +107,15 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jLErrorMinutosAudLibAlta = new javax.swing.JLabel();
         jLErrorHorasAudLibAlta = new javax.swing.JLabel();
         jPMusicAlta = new javax.swing.JPanel();
+        jLNumPistaMusicAlta = new javax.swing.JLabel();
+        jTFNumPistaMusicAlta = new javax.swing.JTextField();
+        jLErrorNumPistaMusicAlta = new javax.swing.JLabel();
+        jLDuracionMusicAlta = new javax.swing.JLabel();
+        jTFDuracionMusicAlta = new javax.swing.JTextField();
+        jLErrorDuracionMusicAlta = new javax.swing.JLabel();
+        jLTipoMusicAlta = new javax.swing.JLabel();
+        jRBTipoCDMusicAlta = new javax.swing.JRadioButton();
+        jRBTipoViniloMusicAlta = new javax.swing.JRadioButton();
         jPVideoJuegoAlta = new javax.swing.JPanel();
         jBValidarAlta = new javax.swing.JButton();
         jBGuardarAlta = new javax.swing.JButton();
@@ -286,9 +297,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
         jLTipoTapaLibImpAlta.setText("Tipo da tapa:");
 
+        bGTapaLibImpAlta.add(jRBTapaDuraLibImpAlta);
         jRBTapaDuraLibImpAlta.setSelected(true);
         jRBTapaDuraLibImpAlta.setText("Dura");
 
+        bGTapaLibImpAlta.add(jRBTapaBlandaLibImpAlta);
         jRBTapaBlandaLibImpAlta.setText("Blanda");
 
         javax.swing.GroupLayout jPLibImpAltaLayout = new javax.swing.GroupLayout(jPLibImpAlta);
@@ -404,15 +417,72 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
         jPMusicAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLNumPistaMusicAlta.setText("Numero de Pistas:");
+
+        jTFNumPistaMusicAlta.setText("0");
+
+        jLDuracionMusicAlta.setText("Duracion:");
+
+        jTFDuracionMusicAlta.setText("0.0");
+
+        jLTipoMusicAlta.setText("Tipo:");
+
+        bGTipoMusicAlta.add(jRBTipoCDMusicAlta);
+        jRBTipoCDMusicAlta.setSelected(true);
+        jRBTipoCDMusicAlta.setText("CD");
+
+        bGTipoMusicAlta.add(jRBTipoViniloMusicAlta);
+        jRBTipoViniloMusicAlta.setText("Vinilo");
+
         javax.swing.GroupLayout jPMusicAltaLayout = new javax.swing.GroupLayout(jPMusicAlta);
         jPMusicAlta.setLayout(jPMusicAltaLayout);
         jPMusicAltaLayout.setHorizontalGroup(
             jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 806, Short.MAX_VALUE)
+            .addGroup(jPMusicAltaLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPMusicAltaLayout.createSequentialGroup()
+                        .addComponent(jLTipoMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRBTipoCDMusicAlta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRBTipoViniloMusicAlta)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPMusicAltaLayout.createSequentialGroup()
+                        .addComponent(jLDuracionMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFDuracionMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorDuracionMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPMusicAltaLayout.createSequentialGroup()
+                        .addComponent(jLNumPistaMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFNumPistaMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLErrorNumPistaMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPMusicAltaLayout.setVerticalGroup(
             jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 129, Short.MAX_VALUE)
+            .addGroup(jPMusicAltaLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLNumPistaMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFNumPistaMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLErrorNumPistaMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTFDuracionMusicAlta)
+                        .addComponent(jLErrorDuracionMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLDuracionMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPMusicAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRBTipoCDMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jRBTipoViniloMusicAlta))
+                    .addComponent(jLTipoMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPVideoJuegoAlta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -432,21 +502,21 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         jPOtrosDatosArtAlta.setLayout(jPOtrosDatosArtAltaLayout);
         jPOtrosDatosArtAltaLayout.setHorizontalGroup(
             jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPOtrosDatosArtAltaLayout.createSequentialGroup()
-                .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPLibImpAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
-                        .addComponent(jPMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLPTipoArtAlta)
-                .addContainerGap())
             .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jCBTipoArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPOtrosDatosArtAltaLayout.createSequentialGroup()
+                        .addGroup(jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPMusicAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPAudLibAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLPTipoArtAlta))
+                    .addComponent(jPLibImpAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPOtrosDatosArtAltaLayout.setVerticalGroup(
             jPOtrosDatosArtAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -465,8 +535,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPMusicAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jPVideoJuegoAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         jBValidarAlta.setText("Validar");
@@ -488,14 +557,14 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPDatosArtAlta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, 819, Short.MAX_VALUE))
+                    .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPAltaArticuloLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jBValidarAlta)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBGuardarAlta)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPAltaArticuloLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jBValidarAlta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBGuardarAlta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPAltaArticuloLayout.setVerticalGroup(
             jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -506,11 +575,11 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
                 .addComponent(jPDatosAutArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPOtrosDatosArtAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(18, 18, 18)
                 .addGroup(jPAltaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBValidarAlta)
                     .addComponent(jBGuardarAlta))
-                .addGap(15, 15, 15))
+                .addGap(14, 14, 14))
         );
 
         jTPArticulos.addTab("Alta", jPAltaArticulo);
@@ -523,7 +592,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPBajaArticuloLayout.setVerticalGroup(
             jPBajaArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1157, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Baja", jPBajaArticulo);
@@ -536,7 +605,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPModifArticuloLayout.setVerticalGroup(
             jPModifArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1157, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Modificar", jPModifArticulo);
@@ -549,7 +618,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPConsultarArticuloLayout.setVerticalGroup(
             jPConsultarArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1157, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar", jPConsultarArticulo);
@@ -562,7 +631,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
         );
         jPConsultarTodosArticulosLayout.setVerticalGroup(
             jPConsultarTodosArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1157, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
         );
 
         jTPArticulos.addTab("Consultar Todos", jPConsultarTodosArticulos);
@@ -591,7 +660,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
             .addGroup(jPVolverLayout.createSequentialGroup()
                 .addGap(292, 292, 292)
                 .addComponent(jLVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(713, Short.MAX_VALUE))
+                .addContainerGap(664, Short.MAX_VALUE))
         );
 
         jTPArticulos.addTab("Volver", jPVolver);
@@ -742,6 +811,8 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bGTapaLibImpAlta;
+    private javax.swing.ButtonGroup bGTipoMusicAlta;
     private javax.swing.JButton jBGuardarAlta;
     private javax.swing.JButton jBValidarAlta;
     private javax.swing.JCheckBox jCBDeterioradoAlta;
@@ -753,7 +824,9 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JLabel jLAnyoAlta2000;
     private javax.swing.JLabel jLAnyoAlta2022;
     private javax.swing.JLabel jLApellidosAutorAlta;
+    private javax.swing.JLabel jLDuracionMusicAlta;
     private javax.swing.JLabel jLErrorApellidosAutorAlta;
+    private javax.swing.JLabel jLErrorDuracionMusicAlta;
     private javax.swing.JLabel jLErrorFechaAlta;
     private javax.swing.JLabel jLErrorHorasAudLibAlta;
     private javax.swing.JLabel jLErrorMinutosAudLibAlta;
@@ -761,6 +834,7 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JLabel jLErrorNombreAutorAlta;
     private javax.swing.JLabel jLErrorNumPagAudLibAlta;
     private javax.swing.JLabel jLErrorNumPagLibImpAlta;
+    private javax.swing.JLabel jLErrorNumPistaMusicAlta;
     private javax.swing.JLabel jLErrorResumenAlta;
     private javax.swing.JLabel jLFechaAlta;
     private javax.swing.JLabel jLHorasAudLibAlta;
@@ -768,8 +842,10 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JLabel jLNombreAutorAlta;
     private javax.swing.JLabel jLNumPagAudLibAlta;
     private javax.swing.JLabel jLNumPagLibImpAlta;
+    private javax.swing.JLabel jLNumPistaMusicAlta;
     private javax.swing.JLayeredPane jLPTipoArtAlta;
     private javax.swing.JLabel jLResumenAlta;
+    private javax.swing.JLabel jLTipoMusicAlta;
     private javax.swing.JLabel jLTipoTapaLibImpAlta;
     private javax.swing.JLabel jLVolver;
     private javax.swing.JLabel jLblNombreAlta;
@@ -788,16 +864,20 @@ public class PantallaOpcionesArticulos extends javax.swing.JFrame {
     private javax.swing.JPanel jPVolver;
     private javax.swing.JRadioButton jRBTapaBlandaLibImpAlta;
     private javax.swing.JRadioButton jRBTapaDuraLibImpAlta;
+    private javax.swing.JRadioButton jRBTipoCDMusicAlta;
+    private javax.swing.JRadioButton jRBTipoViniloMusicAlta;
     private javax.swing.JSlider jSAnyoAlta;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTAResumenAlta;
     private javax.swing.JTextField jTFApellidosAutorAlta;
+    private javax.swing.JTextField jTFDuracionMusicAlta;
     private javax.swing.JTextField jTFHorasAudLibAlta;
     private javax.swing.JTextField jTFMinutosAudLibAlta;
     private javax.swing.JTextField jTFNombreAlta;
     private javax.swing.JTextField jTFNombreAutorAlta;
     private javax.swing.JTextField jTFNumPagAudLibAlta;
     private javax.swing.JTextField jTFNumPagLibImpAlta;
+    private javax.swing.JTextField jTFNumPistaMusicAlta;
     private javax.swing.JTabbedPane jTPArticulos;
     // End of variables declaration//GEN-END:variables
 }

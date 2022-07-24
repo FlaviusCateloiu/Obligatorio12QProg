@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="bGTapaLibImpAlta">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="bGTipoMusicAlta">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -59,16 +65,16 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPDatosAutArtAlta" alignment="1" max="32767" attributes="0"/>
                           <Component id="jPDatosArtAlta" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jPOtrosDatosArtAlta" alignment="0" pref="819" max="32767" attributes="0"/>
+                          <Component id="jPOtrosDatosArtAlta" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="jBValidarAlta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jBGuardarAlta" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Component id="jBValidarAlta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jBGuardarAlta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -81,12 +87,12 @@
                       <Component id="jPDatosAutArtAlta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPOtrosDatosArtAlta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jBValidarAlta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBGuardarAlta" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -363,24 +369,25 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPLibImpAlta" max="32767" attributes="0"/>
-                              <Component id="jPAudLibAlta" max="32767" attributes="0"/>
-                              <Component id="jPVideoJuegoAlta" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jPMusicAlta" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLPTipoArtAlta" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="jCBTipoArtAlta" min="-2" pref="119" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jPMusicAlta" max="32767" attributes="0"/>
+                                      <Component id="jPAudLibAlta" max="32767" attributes="0"/>
+                                      <Component id="jPVideoJuegoAlta" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLPTipoArtAlta" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jPLibImpAlta" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -403,7 +410,6 @@
                                   <Component id="jPMusicAlta" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPVideoJuegoAlta" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -528,12 +534,18 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="jRBTapaDuraLibImpAlta">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bGTapaLibImpAlta"/>
+                        </Property>
                         <Property name="selected" type="boolean" value="true"/>
                         <Property name="text" type="java.lang.String" value="Dura"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="jRBTapaBlandaLibImpAlta">
                       <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bGTapaLibImpAlta"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Blanda"/>
                       </Properties>
                     </Component>
@@ -670,15 +682,114 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="806" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLTipoMusicAlta" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRBTipoCDMusicAlta" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jRBTipoViniloMusicAlta" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLDuracionMusicAlta" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTFDuracionMusicAlta" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLErrorDuracionMusicAlta" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLNumPistaMusicAlta" min="-2" pref="104" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTFNumPistaMusicAlta" min="-2" pref="73" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLErrorNumPistaMusicAlta" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLNumPistaMusicAlta" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="jTFNumPistaMusicAlta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLErrorNumPistaMusicAlta" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTFDuracionMusicAlta" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jLErrorDuracionMusicAlta" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLDuracionMusicAlta" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jRBTipoCDMusicAlta" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="jRBTipoViniloMusicAlta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLTipoMusicAlta" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLNumPistaMusicAlta">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Numero de Pistas:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTFNumPistaMusicAlta">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLErrorNumPistaMusicAlta">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLDuracionMusicAlta">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Duracion:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTFDuracionMusicAlta">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="0.0"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLErrorDuracionMusicAlta">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLTipoMusicAlta">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tipo:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="jRBTipoCDMusicAlta">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bGTipoMusicAlta"/>
+                        </Property>
+                        <Property name="selected" type="boolean" value="true"/>
+                        <Property name="text" type="java.lang.String" value="CD"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="jRBTipoViniloMusicAlta">
+                      <Properties>
+                        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                          <ComponentRef name="bGTipoMusicAlta"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Vinilo"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPVideoJuegoAlta">
                   <Properties>
@@ -737,7 +848,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1157" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -759,7 +870,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1157" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -781,7 +892,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1157" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -803,7 +914,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1157" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -835,7 +946,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
                       <Component id="jLVolver" min="-2" pref="152" max="-2" attributes="0"/>
-                      <EmptySpace pref="713" max="32767" attributes="0"/>
+                      <EmptySpace pref="664" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
